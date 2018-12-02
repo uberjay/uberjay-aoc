@@ -5,8 +5,9 @@ authors = ["Joshua Huber <huber@paradoxical.net>"]
 edition = "2018"
 
 [dependencies]
-aoc-runner = "0.1.0"
-aoc-runner-derive = "0.1.1"
+aoc-runner = "0.2.0-alpha1"
+aoc-runner-derive = "0.2.0-alpha1"
 fxhash = "0.2.1"
 itertools = "0.7.11"
 strsim = "0.8.0"
+failure = "0.1.3"
