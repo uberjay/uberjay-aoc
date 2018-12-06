@@ -47,7 +47,10 @@ const A_Z: [char; 26] = [
 #[aoc(day5, part2)]
 pub fn solve_part2(input: &str) -> usize {
     A_Z.par_iter()
-        .map(|p| reject_adjecent_pairs(input.chars().filter(|c| !c.eq_ignore_ascii_case(&p))).len())
+        .map(|p| {
+            let i = input.chars().filter(|c| !c.eq_ignore_ascii_case(&p));
+            reject_adjecent_pairs(i).len()
+        })
         .min()
         .unwrap()
 }
